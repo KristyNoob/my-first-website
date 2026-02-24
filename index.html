@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>My First Website</title>
+	<style>
+		body {
+			background-color: #f7f7f7;
+			font-family: 'Arial', sans-serif;
+			margin: 0;
+			}
+			.title {
+			text-align: center;
+			}
+			h1 {
+				display: inline-block;
+				color: black;
+				background-color: #ff4d6d;
+				margin-bottom: 50px;
+			}
+			p {
+				font-size: 18px;
+				text-align: left;
+			}
+			.sidebar {
+				width: 200px;
+				background-color: #f4f4f4;
+				height: 100vh;
+				padding-top: 20px;
+				box-shadow: 2px 0 5px rgba(0, 0, 0,0.1);
+				position: fixed;
+				top: 0;
+				left: -200px;
+				padding-top: 20px;
+				transition: left 0.3s ease;
+			}
+			.sidebar.open {
+				left: 0;
+			}
+			.open-btn, .close-btn {
+				background-color: #ff4d6d;
+				color: white;
+				border: none;
+				padding: 10px 15px;
+				border-radius: 6px;
+				cursor: pointer;
+				font-size: 16px;
+			}
+			.close-btn {
+				margin-left: 10px;
+				margin-bottom: 20px;
+			}
+			.sidebar a {
+				display: block;
+				padding: 15px 20px;
+				color: #333;
+				text-decoration: none;
+			}
+			.sidebar a:hover {
+				background: #ddd;
+			}
+			.content {
+				margin-left: 200px;
+				padding: 20px;
+			}
+			.link-box {
+				margin-bottom: 30px;
+			}
+			.button-box {
+				margin-bottom: 40px;
+			}
+			button {
+				padding: 12px 24px;
+				font-size: 16px;
+				background-color: #ff4d6d;
+				color: white;
+				border: none;
+				border-radius: 8px;
+				cursor: pointer;
+				display: inline-block;
+				}
+			.gallery {
+				margin-top: 30px;
+				margin-bottom: 30px;
+			}
+	</style>
+</head>
+<body>
+	<section class="title">
+			<h1>Test</h1>
+		</section>
+	<div class="sidebar" id="sidebar">
+		<button class="close-btn" onclick="closeSidebar()">✖</button>
+		<a href="#home">Home</a>
+		<a href="#gallery">Gallery</a>
+	</div>
+	<div class="content">
+	<button class="open-btn" onclick="openSidebar()">☰ Menu</button>
+		<section id="home">
+			<h2>Home</h2>
+			<p>Welcome to my website!</p>
+		</section>
+		
+		<p>I don't know what to write yet</p>
+		<section id="gallery">
+			<h2>Gallery</h2>
+			<p>Here are some cute pictures :3</p>
+		</section>
+		<section class="gallery">
+			<img src="soymilk.jpg" width="200">
+		</section>
+		<div class="link-box">
+			<a href="https://google.com"> Go to Google</a>
+		</div>
+	<div class="button-box">
+		<button onclick="alert('Hello!')">CLICK ME ^-^</button>
+	</div>
+	</div>
+	<script>
+	function openSidebar() {
+		document.getElementById("sidebar").classList.add("open");
+		}
+		
+	function closeSidebar() {
+		document.getElementById("sidebar").classList.remove("open");
+		}
+	</script>
+</body>
+</html>
