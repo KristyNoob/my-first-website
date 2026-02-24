@@ -5,12 +5,37 @@
 	<title>My First Website</title>
 	<style>
 		body {
-			background-color: #f7f7f7;
+			background-color: #f0f0f0;
 			font-family: 'Arial', sans-serif;
 			margin: 0;
 			}
-			.title {
-			text-align: center;
+			.topbar {
+				max-width: 1430px;
+				margin: 0 auto;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background-color: #ffb3c6;
+				padding: 45px 60px;
+				box-sizing: border-box;
+			}
+			.logo {
+				font-size: 28px;
+				font-weight: bold;
+			}
+			.nav a {
+				margin-left: 20px;
+				text-decoration: none;
+				color: #333;
+				font-weight: 500;
+			}
+			.container {
+				min-height: 100vh;
+				max-width: 1430px;
+				margin: 0 auto;
+				background-color: #ffffff;
+				padding: 20px 40px;
+				box-sizing: border-box;
 			}
 			h1 {
 				display: inline-block;
@@ -23,14 +48,14 @@
 				text-align: left;
 			}
 			.sidebar {
-				width: 200px;
+				width: 250px;
 				background-color: #f4f4f4;
 				height: 100vh;
 				padding-top: 20px;
 				box-shadow: 2px 0 5px rgba(0, 0, 0,0.1);
 				position: fixed;
 				top: 0;
-				left: -200px;
+				left: -250px;
 				padding-top: 20px;
 				transition: left 0.3s ease;
 			}
@@ -60,7 +85,7 @@
 				background: #ddd;
 			}
 			.content {
-				margin-left: 200px;
+				text-align: left;
 				padding: 20px;
 			}
 			.link-box {
@@ -86,14 +111,16 @@
 	</style>
 </head>
 <body>
-	<section class="title">
-			<h1>Test</h1>
-		</section>
-	<div class="sidebar" id="sidebar">
+	<header class="topbar">
+			<div class="logo">Test</div>
+			<nav class="nav">
+			<div class="sidebar" id="sidebar">
 		<button class="close-btn" onclick="closeSidebar()">✖</button>
 		<a href="#home">Home</a>
 		<a href="#gallery">Gallery</a>
-	</div>
+			</div>
+	</header>
+	<div class="container">
 	<div class="content">
 	<button class="open-btn" onclick="openSidebar()">☰ Menu</button>
 		<section id="home">
@@ -114,6 +141,7 @@
 		</div>
 	<div class="button-box">
 		<button onclick="alert('Hello!')">CLICK ME ^-^</button>
+	</div>
 	</div>
 	</div>
 	<script>
