@@ -2,12 +2,20 @@
 <html>
 <head>
 	<meta charset = "UTF-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
 	<title>My First Website</title>
 	<style>
 		body {
 			background-color: #f0f0f0;
 			font-family: 'Arial', sans-serif;
 			margin: 0;
+			}
+			.fascinate-regular {
+				font-family: "Fascinate", system-ui;
+				font-weight: 400;
+				font-style: normal;
 			}
 			.topbar {
 				max-width: 1430px;
@@ -19,8 +27,13 @@
 				padding: 45px 60px;
 				box-sizing: border-box;
 			}
+			.logo-img {
+				height: 100px;
+				width: auto;
+				margin-right: 15px;
+			}
 			.logo {
-				font-size: 28px;
+				font-size: 44px;
 				font-weight: bold;
 			}
 			.nav a {
@@ -104,20 +117,17 @@
 				cursor: pointer;
 				display: inline-block;
 				}
-			.gallery {
-				margin-top: 30px;
-				margin-bottom: 30px;
-			}
 	</style>
 </head>
 <body>
 	<header class="topbar">
-			<div class="logo">Test</div>
+			<img src="soymilk.jpg" class="logo-img">
+			<div class="logo fascinate-regular">MY FIRST WEBSITE</div>
 			<nav class="nav">
 			<div class="sidebar" id="sidebar">
 		<button class="close-btn" onclick="closeSidebar()">✖</button>
 		<a href="#home">Home</a>
-		<a href="#gallery">Gallery</a>
+		<a href="#Learning Process">Learning Process</a>
 			</div>
 	</header>
 	<div class="container">
@@ -128,17 +138,24 @@
 			<p>Welcome to my website!</p>
 		</section>
 		
-		<p>I don't know what to write yet</p>
-		<section id="gallery">
-			<h2>Gallery</h2>
-			<p>Here are some cute pictures :3</p>
+		<p>This Website is just for fun purposes. I am using it to see what coding is like.</p>
+		<p>I don't have much experience yet, so it looks very simple. However bit by bit I will try out more stuff on here.</p>
+		<p>So far its quite understandable, but some things take a lot of time.</p>
+		<p>I noticed that even forgetting one little > or / and so on, can make the whole thing not work.</p>
+		<p>It is definitely a long process, annoying at times, but also very fun. Especially when something actually works out.</p>
+		<p>I will continue with this journey as of now. Who knows... Maybe this is my new hobby.</p>
+		<section id="Learning Process">
+			<h2>What I learned so far</h2>
+			<p>So far I am on day 2, but I already learned quite a lot.</p>
+			<p>I have used html, css and a little bit of java.</p>
+			<p>I have learned how to make a sidebar, a button, a link, a logo and so on.</p>
+			<p>I have figured out how to change colors and also how to change fonts.</p>
+			<p>I learned how to create an actual link to my website by using GitHub.</p>
+			<p>I will try to make my website look more like a website bit by bit.</p>
+			<p>I also want to figure out how to use my sidebar, to not only jump to the specific section on the same page,</p>
+			<p>but also how to make it jump to a whole new page.</p>
+			<p>The process will be taking a bit longer than wanted due to work, but theres no deadline.</p>
 		</section>
-		<section class="gallery">
-			<img src="soymilk.jpg" width="200">
-		</section>
-		<div class="link-box">
-			<a href="https://google.com"> Go to Google</a>
-		</div>
 	<div class="button-box">
 		<button onclick="alert('Hello!')">CLICK ME ^-^</button>
 	</div>
